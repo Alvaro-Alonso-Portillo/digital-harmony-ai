@@ -8,7 +8,7 @@ const testimonials = [
     quote: "Implementar las soluciones de IA de NexusAI transformó completamente nuestras campañas. Aumentamos nuestro ROAS en un 47% y redujimos el tiempo dedicado a gestión de anuncios en un 70%.",
     author: "María Rodríguez",
     position: "Directora de Marketing, E-commerce Moda",
-    avatar: "/placeholder.svg",
+    avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=150&h=150",
     initials: "MR",
     stars: 5
   },
@@ -16,7 +16,7 @@ const testimonials = [
     quote: "Los chatbots y asistentes virtuales que implementamos con NexusAI incrementaron nuestra tasa de conversión en un 32%. El equipo entendió perfectamente nuestras necesidades.",
     author: "Carlos Mendoza",
     position: "CEO, Startup SaaS",
-    avatar: "/placeholder.svg",
+    avatar: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=150&h=150",
     initials: "CM",
     stars: 5
   },
@@ -24,7 +24,7 @@ const testimonials = [
     quote: "La automatización de nuestras campañas de email marketing nos permitió incrementar nuestras ventas en un 28% mientras reducíamos los costes operativos. Excelente servicio.",
     author: "Laura Gómez",
     position: "Directora Digital, Retail",
-    avatar: "/placeholder.svg",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150",
     initials: "LG",
     stars: 5
   },
@@ -32,7 +32,7 @@ const testimonials = [
     quote: "La generación de contenido con IA nos ha permitido escalar nuestra producción sin perder calidad ni personalización. Una herramienta invaluable para nuestro equipo.",
     author: "Javier López",
     position: "Director Creativo, Agencia Creativa",
-    avatar: "/placeholder.svg",
+    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150",
     initials: "JL",
     stars: 4
   }
