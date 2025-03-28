@@ -11,13 +11,13 @@ const Footer = () => {
             <div className="mb-6">
               <a href="#" className="flex items-center">
                 <span className="text-2xl font-display font-bold text-white">
-                  NEXUS<span className="text-agency-green">AI</span>
+                  Optimiz<span className="text-agency-green">IA</span>
                 </span>
               </a>
             </div>
             <p className="text-white/70 mb-6">
-              Automatización, optimización y personalización de tu marketing digital con 
-              soluciones innovadoras basadas en IA avanzada.
+              Transformamos datos en crecimiento mediante IA avanzada, automatizando tu marketing digital para maximizar 
+              resultados con menos recursos y mayor personalización.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-agency-green transition-colors">
@@ -145,7 +145,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} NexusAI. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} OptimizIA. Todos los derechos reservados.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-white/50">
             <a href="#" className="hover:text-white">Políticas de Privacidad</a>

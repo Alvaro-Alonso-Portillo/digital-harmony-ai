@@ -17,12 +17,12 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Transforma tu marketing con 
-              <span className="heading-gradient"> inteligencia artificial</span>
+              Transformamos datos en 
+              <span className="heading-gradient"> crecimiento</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Automatiza, optimiza y personaliza tus estrategias de marketing digital con soluciones innovadoras basadas en IA avanzada.
+              Automatizamos, optimizamos y personalizamos tus estrategias de marketing digital con soluciones innovadoras basadas en IA avanzada.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
@@ -75,9 +75,9 @@ const Hero = () => {
                       <div className="h-full bg-secondary w-3/4 rounded-full animate-pulse-slow"></div>
                     </div>
                     <div className="mt-2 flex justify-between text-xs text-muted-foreground">
-                      <span>ROI: +27%</span>
-                      <span>CPA: -18%</span>
-                      <span>CTR: +32%</span>
+                      <span>ROI: +35%</span>
+                      <span>CPA: -40%</span>
+                      <span>CTR: +65%</span>
                     </div>
                   </div>
                   

@@ -1,113 +1,71 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
+import { useMediaQuery } from '@/hooks/use-mobile';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-      <div className="container-wide">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center">
-            <a href="#" className="flex items-center">
-              <span className="text-xl md:text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
-                NEXUS<span className="text-secondary">AI</span>
-              </span>
-            </a>
-          </div>
-
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#servicios" className="text-sm font-medium hover:text-secondary transition-colors">
-              Servicios
-            </a>
-            <a href="#caracteristicas" className="text-sm font-medium hover:text-secondary transition-colors">
-              ¿Por qué nosotros?
-            </a>
-            <a href="#testimonios" className="text-sm font-medium hover:text-secondary transition-colors">
-              Testimonios
-            </a>
-            <a href="#precios" className="text-sm font-medium hover:text-secondary transition-colors">
-              Precios
-            </a>
-            <Button asChild size="sm" className="bg-secondary hover:bg-primary text-white">
-              <a href="#contacto">Contactar</a>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+      <div className="container-wide py-4">
+        <nav className="flex items-center justify-between">
+          <a href="/" className="flex items-center">
+            <span className="text-2xl font-display font-bold">
+              Optimiz<span className="text-agency-green">IA</span>
+            </span>
+          </a>
+          
+          {isMobile ? (
+            <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden">
+              {isMenuOpen ? <X /> : <Menu />}
             </Button>
-          </nav>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile navigation */}
-      {isMobileMenuOpen && (
-        <nav className="md:hidden bg-card p-4 shadow-md">
-          <div className="flex flex-col space-y-4">
-            <a 
-              href="#servicios" 
-              className="text-sm font-medium hover:text-secondary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Servicios
-            </a>
-            <a 
-              href="#caracteristicas" 
-              className="text-sm font-medium hover:text-secondary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              ¿Por qué nosotros?
-            </a>
-            <a 
-              href="#testimonios" 
-              className="text-sm font-medium hover:text-secondary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Testimonios
-            </a>
-            <a 
-              href="#precios" 
-              className="text-sm font-medium hover:text-secondary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Precios
-            </a>
-            <Button 
-              asChild 
-              size="sm" 
-              className="bg-secondary hover:bg-primary text-white w-full"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <a href="#contacto">Contactar</a>
+          ) : (
+            <ul className="hidden md:flex items-center space-x-8">
+              <li><a href="#servicios" className="text-foreground hover:text-agency-green transition-colors">Servicios</a></li>
+              <li><a href="#caracteristicas" className="text-foreground hover:text-agency-green transition-colors">Características</a></li>
+              <li><a href="#testimonios" className="text-foreground hover:text-agency-green transition-colors">Testimonios</a></li>
+              <li><a href="#precios" className="text-foreground hover:text-agency-green transition-colors">Precios</a></li>
+              <li><a href="#contacto" className="text-foreground hover:text-agency-green transition-colors">Contacto</a></li>
+            </ul>
+          )}
+          
+          <div className="hidden md:block">
+            <Button asChild className="bg-agency-blue hover:bg-agency-green text-white">
+              <a href="#contacto">
+                Solicitar demo
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </a>
             </Button>
           </div>
         </nav>
-      )}
+        
+        {isMobile && isMenuOpen && (
+          <div className="md:hidden mt-4 py-4 border-t border-border">
+            <ul className="space-y-4">
+              <li><a href="#servicios" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Servicios</a></li>
+              <li><a href="#caracteristicas" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Características</a></li>
+              <li><a href="#testimonios" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Testimonios</a></li>
+              <li><a href="#precios" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Precios</a></li>
+              <li><a href="#contacto" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Contacto</a></li>
+              <li className="pt-4">
+                <Button asChild className="w-full bg-agency-blue hover:bg-agency-green text-white">
+                  <a href="#contacto" onClick={toggleMenu}>
+                    Solicitar demo
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </a>
+                </Button>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </header>
   );
 };
