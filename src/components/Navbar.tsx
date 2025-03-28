@@ -21,32 +21,32 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 dark:bg-agency-dark/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center">
             <a href="#" className="flex items-center">
-              <span className="text-xl md:text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-agency-blue to-agency-turquoise">
-                NEXUS<span className="text-agency-turquoise">AI</span>
+              <span className="text-xl md:text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
+                NEXUS<span className="text-secondary">AI</span>
               </span>
             </a>
           </div>
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#servicios" className="text-sm font-medium hover:text-agency-turquoise transition-colors">
+            <a href="#servicios" className="text-sm font-medium hover:text-secondary transition-colors">
               Servicios
             </a>
-            <a href="#caracteristicas" className="text-sm font-medium hover:text-agency-turquoise transition-colors">
+            <a href="#caracteristicas" className="text-sm font-medium hover:text-secondary transition-colors">
               ¿Por qué nosotros?
             </a>
-            <a href="#testimonios" className="text-sm font-medium hover:text-agency-turquoise transition-colors">
+            <a href="#testimonios" className="text-sm font-medium hover:text-secondary transition-colors">
               Testimonios
             </a>
-            <a href="#precios" className="text-sm font-medium hover:text-agency-turquoise transition-colors">
+            <a href="#precios" className="text-sm font-medium hover:text-secondary transition-colors">
               Precios
             </a>
-            <Button asChild size="sm" className="bg-agency-turquoise hover:bg-agency-blue text-white">
+            <Button asChild size="sm" className="bg-secondary hover:bg-primary text-white">
               <a href="#contacto">Contactar</a>
             </Button>
           </nav>
@@ -67,32 +67,32 @@ const Navbar = () => {
 
       {/* Mobile navigation */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-white dark:bg-agency-dark p-4 shadow-md">
+        <nav className="md:hidden bg-card p-4 shadow-md">
           <div className="flex flex-col space-y-4">
             <a 
               href="#servicios" 
-              className="text-sm font-medium hover:text-agency-turquoise transition-colors"
+              className="text-sm font-medium hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Servicios
             </a>
             <a 
               href="#caracteristicas" 
-              className="text-sm font-medium hover:text-agency-turquoise transition-colors"
+              className="text-sm font-medium hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               ¿Por qué nosotros?
             </a>
             <a 
               href="#testimonios" 
-              className="text-sm font-medium hover:text-agency-turquoise transition-colors"
+              className="text-sm font-medium hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Testimonios
             </a>
             <a 
               href="#precios" 
-              className="text-sm font-medium hover:text-agency-turquoise transition-colors"
+              className="text-sm font-medium hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Precios
@@ -100,7 +100,7 @@ const Navbar = () => {
             <Button 
               asChild 
               size="sm" 
-              className="bg-agency-turquoise hover:bg-agency-blue text-white w-full"
+              className="bg-secondary hover:bg-primary text-white w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <a href="#contacto">Contactar</a>

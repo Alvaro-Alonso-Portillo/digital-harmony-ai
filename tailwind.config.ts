@@ -65,10 +65,10 @@ export default {
 				},
 				// Colores personalizados para la agencia
 				agency: {
-					blue: '#0B2447',
-					turquoise: '#19A7CE',
+					purple: '#9b57f3',
+					aqua: '#35e0c5',
+					dark: '#111827',
 					light: '#F6F1F1',
-					dark: '#27374D'
 				}
 			},
 			borderRadius: {
@@ -116,6 +116,22 @@ export default {
 					'50%': {
 						opacity: '0.8',
 					},
+				},
+				'rotate-slow': {
+					'0%': {
+						transform: 'rotate(0deg)',
+					},
+					'100%': {
+						transform: 'rotate(360deg)',
+					},
+				},
+				'orbit': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(100px) rotate(0deg)',
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(100px) rotate(-360deg)',
+					},
 				}
 			},
 			animation: {
@@ -123,7 +139,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'gradient-x': 'gradient-x 15s ease infinite',
-				'pulse-slow': 'pulse-slow 4s ease-in-out infinite'
+				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 20s linear infinite',
+				'orbit': 'orbit 20s linear infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
