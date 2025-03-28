@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between">
           <a href="/" className="flex items-center">
             <span className="text-2xl font-display font-bold">
-              Optimiz<span className="text-agency-green">IA</span>
+              Optimiz<span className="text-agency-green">IA</span> Servicios
             </span>
           </a>
           
