@@ -7,52 +7,52 @@ import {
 
 const features = [
   {
-    icon: <Brain className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Brain className="h-8 w-8 text-agency-green" />,
     title: "IA de Última Generación",
     description: "Utilizamos los modelos de IA más avanzados para ofrecer resultados excepcionales y precisos."
   },
   {
-    icon: <LineChart className="h-8 w-8 text-agency-turquoise" />,
+    icon: <LineChart className="h-8 w-8 text-agency-green" />,
     title: "Análisis Predictivo",
     description: "Anticipamos tendencias y comportamientos para optimizar estrategias antes de implementarlas."
   },
   {
-    icon: <Cpu className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Cpu className="h-8 w-8 text-agency-green" />,
     title: "Automatización Completa",
     description: "Reduce hasta un 70% el tiempo dedicado a tareas repetitivas con nuestros sistemas de automatización."
   },
   {
-    icon: <RefreshCcw className="h-8 w-8 text-agency-turquoise" />,
+    icon: <RefreshCcw className="h-8 w-8 text-agency-green" />,
     title: "Mejora Continua",
     description: "Nuestros algoritmos aprenden constantemente para mejorar los resultados a lo largo del tiempo."
   },
   {
-    icon: <Shield className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Shield className="h-8 w-8 text-agency-green" />,
     title: "Seguridad de Datos",
     description: "Protocolos avanzados de seguridad que garantizan la protección de todos tus datos."
   },
   {
-    icon: <Clock className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Clock className="h-8 w-8 text-agency-green" />,
     title: "Ahorro de Tiempo",
     description: "Reduce hasta un 70% el tiempo dedicado a gestionar tus campañas de marketing."
   },
   {
-    icon: <Users className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Users className="h-8 w-8 text-agency-green" />,
     title: "Personalización Avanzada",
     description: "Experiencias únicas para cada cliente basadas en su comportamiento e intereses."
   },
   {
-    icon: <Award className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Award className="h-8 w-8 text-agency-green" />,
     title: "Expertos en Marketing",
     description: "Combinamos IA con el conocimiento de especialistas con más de 10 años de experiencia."
   },
   {
-    icon: <Target className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Target className="h-8 w-8 text-agency-green" />,
     title: "Resultados Medibles",
     description: "Métricas claras y dashboards en tiempo real para monitorizar el éxito de tus campañas."
   },
   {
-    icon: <Zap className="h-8 w-8 text-agency-turquoise" />,
+    icon: <Zap className="h-8 w-8 text-agency-green" />,
     title: "Implementación Rápida",
     description: "Ponemos en marcha nuestras soluciones en semanas, no meses, para acelerar tu crecimiento."
   }
@@ -78,7 +78,7 @@ const Features = () => {
               key={index} 
               className="flex flex-col items-center text-center"
             >
-              <div className="h-16 w-16 rounded-full bg-white dark:bg-agency-dark/80 shadow-md flex items-center justify-center mb-4 group-hover:bg-agency-turquoise/20 transition-colors">
+              <div className="h-16 w-16 rounded-full bg-white dark:bg-agency-dark/80 shadow-md flex items-center justify-center mb-4 group-hover:bg-agency-green/20 transition-colors">
                 {feature.icon}
               </div>
               
@@ -88,7 +88,7 @@ const Features = () => {
           ))}
         </div>
         
-        <div className="mt-20 p-8 bg-gradient-to-r from-agency-blue to-agency-turquoise rounded-2xl text-white shadow-lg">
+        <div className="mt-20 p-8 bg-gradient-to-r from-agency-blue to-agency-green rounded-2xl text-white shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4">

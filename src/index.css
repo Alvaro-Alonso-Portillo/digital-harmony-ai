@@ -16,16 +16,16 @@
     --popover: 225 30% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 270 75% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 60% 51%;    /* Azul tecnológico #2D72D9 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 84% 39%;
+    --secondary: 168 83% 42%;  /* Verde esmeralda #1ABC9C */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 225 30% 16%;
     --muted-foreground: 215 20% 75%;
 
-    --accent: 160 84% 39%;
+    --accent: 285 40% 53%;     /* Acento púrpura #9B59B6 */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
@@ -40,25 +40,25 @@
 
   .light {
     --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --foreground: 215 28% 29%;  /* Gris oscuro #34495E */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 0 0% 100%;          /* Blanco #FFFFFF */
+    --card-foreground: 215 28% 29%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 215 28% 29%;
 
-    --primary: 270 75% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 60% 51%;     /* Azul tecnológico #2D72D9 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 84% 39%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 168 83% 42%;   /* Verde esmeralda #1ABC9C */
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 160 84% 39%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 285 40% 53%;      /* Acento púrpura #9B59B6 */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -91,8 +91,8 @@
   .grid-pattern {
     background-size: 20px 20px;
     background-image: 
-      linear-gradient(to right, rgba(129, 230, 217, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(129, 230, 217, 0.05) 1px, transparent 1px);
+      linear-gradient(to right, rgba(26, 188, 156, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(26, 188, 156, 0.05) 1px, transparent 1px);
   }
   
   .heading-gradient {
@@ -111,4 +111,3 @@
     @apply text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12;
   }
 }
-

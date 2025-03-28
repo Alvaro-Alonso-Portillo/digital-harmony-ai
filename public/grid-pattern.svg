@@ -1,8 +1,8 @@
 
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="20" height="20" fill="#35e0c5" opacity="0.01"/>
-  <line x1="0" y1="0" x2="20" y2="0" stroke="#35e0c5" stroke-width="0.5" opacity="0.05"/>
-  <line x1="0" y1="20" x2="20" y2="20" stroke="#35e0c5" stroke-width="0.5" opacity="0.05"/>
-  <line x1="0" y1="0" x2="0" y2="20" stroke="#35e0c5" stroke-width="0.5" opacity="0.05"/>
-  <line x1="20" y1="0" x2="20" y2="20" stroke="#35e0c5" stroke-width="0.5" opacity="0.05"/>
+  <rect width="20" height="20" fill="#1ABC9C" opacity="0.01"/>
+  <line x1="0" y1="0" x2="20" y2="0" stroke="#1ABC9C" stroke-width="0.5" opacity="0.05"/>
+  <line x1="0" y1="20" x2="20" y2="20" stroke="#1ABC9C" stroke-width="0.5" opacity="0.05"/>
+  <line x1="0" y1="0" x2="0" y2="20" stroke="#1ABC9C" stroke-width="0.5" opacity="0.05"/>
+  <line x1="20" y1="0" x2="20" y2="20" stroke="#1ABC9C" stroke-width="0.5" opacity="0.05"/>
 </svg>
