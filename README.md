@@ -57,9 +57,5 @@ Este proyecto está construido con:
 
 Para desplegar este proyecto, puedes usar la opción "Share -> Publish" en Lovable.
 
-## Dominios Personalizados
-
-Por ahora, Lovable no soporta dominios personalizados. Si necesitas desplegar tu proyecto en tu propio dominio, te recomiendo usar Netlify. Puedes encontrar más detalles en su documentación sobre [dominios personalizados](https://docs.netlify.com/domains-https/custom-domains/).
-
 ¡Espero que disfrutes explorando y colaborando en este proyecto! Si tienes alguna pregunta, no dudes en contactarme. 
 
