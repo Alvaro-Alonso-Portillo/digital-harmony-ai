@@ -1,69 +1,65 @@
-# Welcome to your Lovable project
+# Mi Proyecto digital-harmony-ai
 
-## Project info
+¡Bienvenido a mi proyecto! Este es un espacio donde he estado experimentando y construyendo algo genial.
 
-**URL**: https://lovable.dev/projects/acc1c093-6572-42ef-8efc-ca2ee47a67f1
 
-## How can I edit this code?
 
-There are several ways of editing your application.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/acc1c093-6572-42ef-8efc-ca2ee47a67f1) and start prompting.
+**Requisitos:**
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js & npm (recomiendo usar [nvm](https://github.com/nvm-sh/nvm))
 
-**Use your preferred IDE**
+**Pasos:**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1.  Clona el repositorio:
+    ```bash
+    git clone <TU_URL_GIT>
+    ```
+2.  Navega al directorio del proyecto:
+    ```bash
+    cd <NOMBRE_TU_PROYECTO>
+    ```
+3.  Instala las dependencias:
+    ```bash
+    npm i
+    ```
+4.  Inicia el servidor de desarrollo con auto-recarga:
+    ```bash
+    npm run dev
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Editando Directamente en GitHub (Para cambios pequeños)
 
-Follow these steps:
+- Navega al archivo que deseas modificar.
+- Haz clic en el icono del lápiz (Editar) en la parte superior derecha del archivo.
+- Realiza tus cambios y confirma (commit) los cambios.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Usando GitHub Codespaces (Para un entorno de desarrollo rápido en la nube)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Ve a la página principal del repositorio.
+- Haz clic en el botón "Code" (verde) cerca de la parte superior derecha.
+- Selecciona la pestaña "Codespaces".
+- Haz clic en "New codespace" para iniciar un nuevo entorno Codespace.
+- Edita los archivos directamente en Codespace y confirma y sube tus cambios cuando termines.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Tecnologías Utilizadas
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Este proyecto está construido con:
 
-**Edit a file directly in GitHub**
+-   Vite
+-   TypeScript
+-   React
+-   shadcn-ui
+-   Tailwind CSS
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Despliegue del Proyecto
 
-**Use GitHub Codespaces**
+Para desplegar este proyecto, puedes usar la opción "Share -> Publish" en Lovable.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Dominios Personalizados
 
-## What technologies are used for this project?
+Por ahora, Lovable no soporta dominios personalizados. Si necesitas desplegar tu proyecto en tu propio dominio, te recomiendo usar Netlify. Puedes encontrar más detalles en su documentación sobre [dominios personalizados](https://docs.netlify.com/domains-https/custom-domains/).
 
-This project is built with .
+¡Espero que disfrutes explorando y colaborando en este proyecto! Si tienes alguna pregunta, no dudes en contactarme. 
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/acc1c093-6572-42ef-8efc-ca2ee47a67f1) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
