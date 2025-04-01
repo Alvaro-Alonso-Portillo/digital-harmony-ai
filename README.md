@@ -55,7 +55,5 @@ Este proyecto está construido con:
 
 ## Despliegue del Proyecto
 
-Para desplegar este proyecto, puedes usar la opción "Share -> Publish" en Lovable.
-
 ¡Espero que disfrutes explorando y colaborando en este proyecto! Si tienes alguna pregunta, no dudes en contactarme. 
 
