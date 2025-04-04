@@ -1,7 +1,14 @@
 
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -40,86 +47,88 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonios" className="section-padding bg-white dark:bg-agency-dark/80">
-      <div className="container-wide">
-        <div className="text-center mb-16">
-          <h2 className="section-title">
-            Lo que <span className="heading-gradient">dicen</span> nuestros clientes
+    <section id="testimonios" className="py-24 bg-white dark:bg-agency-dark/80 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col mb-16">
+          <span className="text-sm uppercase tracking-widest text-muted-foreground mb-4">Testimonios</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-8">
+            Historias de <span className="heading-gradient">éxito</span>
           </h2>
-          <p className="section-subtitle">
-            Descubre cómo nuestras soluciones de marketing basadas en IA han ayudado a empresas 
-            como la tuya a alcanzar sus objetivos
+          <p className="text-muted-foreground max-w-2xl text-lg">
+            Descubre cómo nuestras soluciones de IA han transformado los negocios de nuestros clientes
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="bg-white dark:bg-agency-dark border border-gray-100 dark:border-gray-800 rounded-xl p-6 shadow-sm"
-            >
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`h-4 w-4 ${
-                      i < testimonial.stars 
-                        ? 'text-yellow-400 fill-yellow-400' 
-                        : 'text-gray-300'
-                    }`}
-                  />
-                ))}
-              </div>
-              
-              <div className="relative mb-6">
-                <Quote className="absolute top-0 left-0 h-8 w-8 text-agency-turquoise/20 -translate-x-4 -translate-y-4" />
-                <p className="text-muted-foreground relative z-10">{testimonial.quote}</p>
-              </div>
-              
-              <div className="flex items-center">
-                <Avatar className="h-12 w-12 mr-4">
-                  <AvatarImage src={testimonial.avatar} alt={testimonial.author} />
-                  <AvatarFallback className="bg-agency-blue text-white">
-                    {testimonial.initials}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-bold">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                </div>
-              </div>
+        <div className="relative">
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="group h-full">
+                    <div className="border border-border bg-background/50 dark:bg-black/20 backdrop-blur-sm rounded-xl p-8 h-full hover:border-agency-green transition-colors duration-300">
+                      <div className="flex items-center mb-6">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-4 w-4 ${
+                              i < testimonial.stars 
+                                ? 'text-yellow-400 fill-yellow-400' 
+                                : 'text-gray-300'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      
+                      <blockquote className="text-lg text-foreground/90 italic mb-8">
+                        "{testimonial.quote}"
+                      </blockquote>
+                      
+                      <div className="flex items-center mt-auto">
+                        <Avatar className="h-14 w-14 mr-4 border-2 border-transparent group-hover:border-agency-green transition-colors duration-300">
+                          <AvatarImage src={testimonial.avatar} alt={testimonial.author} />
+                          <AvatarFallback className="bg-agency-blue text-white">
+                            {testimonial.initials}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <p className="font-semibold text-foreground">{testimonial.author}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-end gap-2 mt-8">
+              <CarouselPrevious className="static transform-none border-agency-green hover:border-agency-green hover:bg-agency-green/10 text-agency-green" />
+              <CarouselNext className="static transform-none border-agency-green hover:border-agency-green hover:bg-agency-green/10 text-agency-green" />
             </div>
-          ))}
+          </Carousel>
         </div>
         
-        <div className="mt-16 p-8 bg-agency-blue/5 dark:bg-agency-blue/20 rounded-2xl">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Resultados que nuestros clientes obtienen
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Estos son los promedios de mejora que experimentan nuestros clientes tras 
-              implementar nuestras soluciones de marketing con IA
-            </p>
+        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+          <div className="flex flex-col">
+            <p className="text-4xl md:text-5xl font-bold tracking-tighter text-agency-turquoise mb-2">+35%</p>
+            <p className="text-muted-foreground">Incremento en ROI</p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center p-4 bg-white dark:bg-agency-dark rounded-xl shadow-sm">
-              <p className="text-4xl font-bold text-agency-turquoise mb-2">+35%</p>
-              <p className="text-sm text-muted-foreground">Incremento en ROI</p>
-            </div>
-            <div className="text-center p-4 bg-white dark:bg-agency-dark rounded-xl shadow-sm">
-              <p className="text-4xl font-bold text-agency-turquoise mb-2">-42%</p>
-              <p className="text-sm text-muted-foreground">Reducción en CPA</p>
-            </div>
-            <div className="text-center p-4 bg-white dark:bg-agency-dark rounded-xl shadow-sm">
-              <p className="text-4xl font-bold text-agency-turquoise mb-2">+67%</p>
-              <p className="text-sm text-muted-foreground">Aumento en conversiones</p>
-            </div>
-            <div className="text-center p-4 bg-white dark:bg-agency-dark rounded-xl shadow-sm">
-              <p className="text-4xl font-bold text-agency-turquoise mb-2">-70%</p>
-              <p className="text-sm text-muted-foreground">Reducción de tiempo</p>
-            </div>
+          <div className="flex flex-col">
+            <p className="text-4xl md:text-5xl font-bold tracking-tighter text-agency-turquoise mb-2">-42%</p>
+            <p className="text-muted-foreground">Reducción en CPA</p>
+          </div>
+          <div className="flex flex-col">
+            <p className="text-4xl md:text-5xl font-bold tracking-tighter text-agency-turquoise mb-2">+67%</p>
+            <p className="text-muted-foreground">Aumento en conversiones</p>
+          </div>
+          <div className="flex flex-col">
+            <p className="text-4xl md:text-5xl font-bold tracking-tighter text-agency-turquoise mb-2">-70%</p>
+            <p className="text-muted-foreground">Reducción de tiempo</p>
           </div>
         </div>
       </div>
