@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const isMobile = useIsMobile();
@@ -23,26 +24,31 @@ const Navbar = () => {
           </a>
           
           {isMobile ? (
-            <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden">
-              {isMenuOpen ? <X /> : <Menu />}
-            </Button>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden">
+                {isMenuOpen ? <X /> : <Menu />}
+              </Button>
+            </div>
           ) : (
-            <ul className="hidden md:flex items-center space-x-8">
-              <li><a href="#servicios" className="text-foreground hover:text-agency-green transition-colors">Servicios</a></li>
-              <li><a href="#caracteristicas" className="text-foreground hover:text-agency-green transition-colors">Características</a></li>
-              <li><a href="#testimonios" className="text-foreground hover:text-agency-green transition-colors">Testimonios</a></li>
-              <li><a href="#contacto" className="text-foreground hover:text-agency-green transition-colors">Contacto</a></li>
-            </ul>
+            <div className="flex items-center">
+              <ul className="hidden md:flex items-center space-x-8">
+                <li><a href="#servicios" className="text-foreground hover:text-agency-green transition-colors">Servicios</a></li>
+                <li><a href="#caracteristicas" className="text-foreground hover:text-agency-green transition-colors">Características</a></li>
+                <li><a href="#testimonios" className="text-foreground hover:text-agency-green transition-colors">Testimonios</a></li>
+                <li><a href="#contacto" className="text-foreground hover:text-agency-green transition-colors">Contacto</a></li>
+              </ul>
+              <div className="hidden md:flex items-center ml-8 space-x-4">
+                <ThemeToggle />
+                <Button asChild className="bg-agency-blue hover:bg-agency-green text-white">
+                  <a href="#contacto">
+                    Solicitar demo
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
           )}
-          
-          <div className="hidden md:block">
-            <Button asChild className="bg-agency-blue hover:bg-agency-green text-white">
-              <a href="#contacto">
-                Solicitar demo
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
-            </Button>
-          </div>
         </nav>
         
         {isMobile && isMenuOpen && (

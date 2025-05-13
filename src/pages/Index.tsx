@@ -7,10 +7,13 @@ import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { useTheme } from '@/context/ThemeContext';
 
 const Index = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="min-h-screen dark bg-background">
+    <div className={`min-h-screen ${theme}`}>
       <Navbar />
       <main>
         <Hero />

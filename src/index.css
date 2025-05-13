@@ -7,6 +7,38 @@
 
 @layer base {
   :root {
+    --background: 210 40% 98%;
+    --foreground: 215 28% 29%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 29%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 29%;
+
+    --primary: 250 95% 64%;     /* Violeta brillante #7B4BFF */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 168 83% 42%;   /* Verde esmeralda #1ABC9C */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 275 90% 70%;      /* Púrpura brillante #D46DFF */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 5%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
     --background: 225 30% 8%;
     --foreground: 210 40% 98%;
 
@@ -34,44 +66,12 @@
     --border: 225 30% 16%;
     --input: 225 30% 16%;
     --ring: 225 30% 30%;
-
-    --radius: 0.5rem;
-  }
-
-  .light {
-    --background: 210 40% 98%;
-    --foreground: 215 28% 29%;  /* Gris oscuro #34495E */
-
-    --card: 0 0% 100%;          /* Blanco #FFFFFF */
-    --card-foreground: 215 28% 29%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 29%;
-
-    --primary: 250 95% 64%;     /* Violeta brillante #7B4BFF */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 168 83% 42%;   /* Verde esmeralda #1ABC9C */
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-
-    --accent: 275 90% 70%;      /* Púrpura brillante #D46DFF */
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 84% 5%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-200;
   }
 
   body {
@@ -109,5 +109,13 @@
   
   .section-subtitle {
     @apply text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12;
+  }
+
+  .light .card {
+    @apply shadow-sm border border-border bg-white/80 backdrop-blur-sm;
+  }
+  
+  .dark .card {
+    @apply bg-card border border-border;
   }
 }
