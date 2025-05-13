@@ -31,7 +31,6 @@ const Navbar = () => {
               <li><a href="#servicios" className="text-foreground hover:text-agency-green transition-colors">Servicios</a></li>
               <li><a href="#caracteristicas" className="text-foreground hover:text-agency-green transition-colors">Características</a></li>
               <li><a href="#testimonios" className="text-foreground hover:text-agency-green transition-colors">Testimonios</a></li>
-              <li><a href="#precios" className="text-foreground hover:text-agency-green transition-colors">Precios</a></li>
               <li><a href="#contacto" className="text-foreground hover:text-agency-green transition-colors">Contacto</a></li>
             </ul>
           )}
@@ -52,7 +51,6 @@ const Navbar = () => {
               <li><a href="#servicios" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Servicios</a></li>
               <li><a href="#caracteristicas" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Características</a></li>
               <li><a href="#testimonios" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Testimonios</a></li>
-              <li><a href="#precios" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Precios</a></li>
               <li><a href="#contacto" className="block text-foreground hover:text-agency-green transition-colors" onClick={toggleMenu}>Contacto</a></li>
               <li className="pt-4">
                 <Button asChild className="w-full bg-agency-blue hover:bg-agency-green text-white">

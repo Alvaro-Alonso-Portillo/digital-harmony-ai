@@ -16,7 +16,7 @@
     --popover: 225 30% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 60% 51%;    /* Azul tecnológico #2D72D9 */
+    --primary: 250 95% 64%;    /* Violeta brillante #7B4BFF */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 168 83% 42%;  /* Verde esmeralda #1ABC9C */
@@ -25,7 +25,7 @@
     --muted: 225 30% 16%;
     --muted-foreground: 215 20% 75%;
 
-    --accent: 285 40% 53%;     /* Acento púrpura #9B59B6 */
+    --accent: 275 90% 70%;     /* Púrpura brillante #D46DFF */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
@@ -48,7 +48,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 28% 29%;
 
-    --primary: 217 60% 51%;     /* Azul tecnológico #2D72D9 */
+    --primary: 250 95% 64%;     /* Violeta brillante #7B4BFF */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 168 83% 42%;   /* Verde esmeralda #1ABC9C */
@@ -57,7 +57,7 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 285 40% 53%;      /* Acento púrpura #9B59B6 */
+    --accent: 275 90% 70%;      /* Púrpura brillante #D46DFF */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -96,7 +96,7 @@
   }
   
   .heading-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary;
   }
   
   .section-padding {

@@ -65,11 +65,11 @@ export default {
 				},
 				// Colores personalizados para la agencia
 				agency: {
-					blue: '#2D72D9',     // Azul tecnológico
+					blue: '#7B4BFF',     // Violeta brillante
 					green: '#1ABC9C',    // Verde esmeralda
 					gray: '#34495E',     // Gris oscuro
 					white: '#FFFFFF',    // Blanco
-					purple: '#9B59B6',   // Acento púrpura
+					purple: '#D46DFF',   // Púrpura brillante
 					dark: '#111827',     // Color oscuro de fondo
 					light: '#F6F1F1',    // Color claro
 				}
